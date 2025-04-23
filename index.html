@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zomato</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #00bcd4, #2196f3); /* Light blue to blue */
+      color: white;
+    }
+    .card.gradient-bg {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar gradient-bg">
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand">DIGITAL WATCH</a>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row col-4 m-auto mt-5 text-center">
+    <div class="card gradient-bg">
+      <div class="card-body">
+        <h1>INDIAN DIGITAL WATCH</h1>
+        <h3>Asia/Kolkata</h3>
+        <h2 id="time-el">Time</h2>
+        <h3 id="date-el">Date</h3>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<script>
+  let time = document.getElementById('time-el');
+  let date = document.getElementById('date-el');
+
+  function timer() {
+    let currTime = new Date().toLocaleTimeString();
+    let currDate = new Date().toLocaleDateString();
+
+    time.textContent = currTime;
+    date.textContent = currDate;
+  }
+
+  setInterval(timer, 1000);
+</script>
+
+</body>
+</html>
