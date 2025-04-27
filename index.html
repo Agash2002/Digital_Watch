@@ -37,19 +37,8 @@
   </div> 
 </div>
 
-<script>
-  let time = document.getElementById('time-el');
-  let date = document.getElementById('date-el');
+<script src="./watch.js">
 
-  function timer() {
-    let currTime = new Date().toLocaleTimeString();
-    let currDate = new Date().toLocaleDateString();
-
-    time.textContent = currTime;
-    date.textContent = currDate;
-  }
-
-  setInterval(timer, 1000);
 </script>
 
 </body>
